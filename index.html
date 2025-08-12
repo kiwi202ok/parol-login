@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mening Shaxsiy Saytim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="login-screen">
+    <h1>Login</h1>
+    <input id="username" placeholder="Login" />
+    <input id="password" type="password" placeholder="Parol" />
+    <button id="login-btn">Kirish</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <div class="container hidden" id="main-screen">
+    <h2>Xush kelibsiz!</h2>
+    <div class="menu">
+      <button class="app-btn" data-app="pubg">PUBG Mobile</button>
+      <button class="app-btn" data-app="instagram">Instagram</button>
+      <button class="app-btn" data-app="facebook">Facebook</button>
+    </div>
+
+    <div id="accounts-area">
+      <h3 id="accounts-title">Hisoblar</h3>
+      <ul id="accounts-list"></ul>
+      <div id="creds" class="hidden">
+        <h4>Login / Parol</h4>
+        <p id="creds-login"></p>
+        <p id="creds-pass"></p>
+        <button id="logout-btn">Chiqish</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
