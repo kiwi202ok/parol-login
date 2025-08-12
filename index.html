@@ -7,33 +7,44 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container" id="login-screen">
-    <h1>Login</h1>
-    <input id="username" placeholder="Login" />
-    <input id="password" type="password" placeholder="Parol" />
-    <button id="login-btn">Kirish</button>
-    <p id="login-error" class="error"></p>
-  </div>
-
-  <div class="container hidden" id="main-screen">
-    <h2>Xush kelibsiz!</h2>
-    <div class="menu">
-      <button class="app-btn" data-app="pubg">PUBG Mobile</button>
-      <button class="app-btn" data-app="instagram">Instagram</button>
-      <button class="app-btn" data-app="facebook">Facebook</button>
+  <!-- LOGIN SCREEN -->
+  <main class="center" id="login-screen">
+    <div class="card">
+      <h1 class="title">Kirish</h1>
+      <input id="username" type="text" placeholder="Login kiriting" autocomplete="username" />
+      <input id="password" type="password" placeholder="Parol kiriting" autocomplete="current-password" />
+      <button id="login-btn" class="btn primary">Kirish</button>
+      <p id="login-error" class="error"></p>
+     
     </div>
+  </main>
 
-    <div id="accounts-area">
-      <h3 id="accounts-title">Hisoblar</h3>
-      <ul id="accounts-list"></ul>
-      <div id="creds" class="hidden">
-        <h4>Login / Parol</h4>
-        <p id="creds-login"></p>
-        <p id="creds-pass"></p>
-        <button id="logout-btn">Chiqish</button>
+  <!-- MAIN SCREEN -->
+  <main class="center hidden" id="main-screen">
+    <div class="card wide">
+      <div class="top-row">
+        <h2 class="title-sm">Xush kelibsiz!</h2>
+        <button id="logout-btn" class="btn ghost">Chiqish</button>
       </div>
+
+      <div class="apps">
+        <button class="app-btn" data-app="pubg">PUBG Mobile</button>
+        <button class="app-btn" data-app="instagram">Instagram</button>
+        <button class="app-btn" data-app="facebook">Facebook</button>
+      </div>
+
+      <section id="accounts-area">
+        <h3 id="accounts-title">Hisoblar</h3>
+        <ul id="accounts-list" class="list"></ul>
+
+        <div id="creds" class="creds hidden">
+          <h4>Tanlangan akkaunt</h4>
+          <p id="creds-login"></p>
+          <p id="creds-pass"></p>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
